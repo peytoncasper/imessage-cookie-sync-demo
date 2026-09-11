@@ -1,0 +1,4 @@
+#include "Defaults.xcconfig"
+#include? "Local.xcconfig"
+// Release clients receive session-scoped cards from a trusted backend.
+COOKIE_TRANSFER_CLIENT_SECRET =

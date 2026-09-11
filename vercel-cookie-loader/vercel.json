@@ -1,0 +1,24 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/cookies.ts": {
+      "maxDuration": 30
+    },
+    "api/transfers/prepare.ts": {
+      "maxDuration": 15
+    },
+    "api/texts.ts": {
+      "maxDuration": 15
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "destination": "/api/aasa"
+    },
+    {
+      "source": "/open",
+      "destination": "/api/open"
+    }
+  ]
+}

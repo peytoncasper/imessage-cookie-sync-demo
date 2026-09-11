@@ -1,0 +1,22 @@
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+Config/Local.xcconfig
+*.local.xcconfig
+coverage/
+out/
+__pycache__/
+*.pyc
+*.ipa
+*.xcarchive/
+examples/video-demo/public/*.mp4
+examples/video-demo/analysis/
+# Generated sign-in URLs contain short-lived bearer grants.
+.local/
