@@ -6,7 +6,6 @@ import WebKit
 final class MessageWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKHTTPCookieStoreObserver {
     var requestExpansion: (() -> Void)?
     var onCookiesChanged: (([HTTPCookie]) -> Void)?
-    var onPageLoaded: (() -> Void)?
     var isTranscript = false {
         didSet {
             webView.isUserInteractionEnabled = !isTranscript
@@ -102,7 +101,7 @@ final class MessageWebViewController: UIViewController, WKNavigationDelegate, WK
         openTarget(target)
     }
 
-    /// Also used by the App Clip after validating its signed-card parameters.
+    /// Opens a destination after the caller validates the signed card.
     func openTarget(_ target: URL) {
         loadViewIfNeeded()
         guard WebViewMessageLink.allowsNavigation(to: target) else {
@@ -192,7 +191,6 @@ final class MessageWebViewController: UIViewController, WKNavigationDelegate, WK
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         spinner.stopAnimating()
-        onPageLoaded?()
         refreshCookies()
     }
 

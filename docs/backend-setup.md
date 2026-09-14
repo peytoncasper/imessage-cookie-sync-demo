@@ -20,9 +20,6 @@ For the main sign-in flow, configure:
 | `COOKIE_INGEST_SECRET` | Random secret, at least 32 characters; signs session grants |
 | `APP_TRANSFER_SECRET` | Separate random secret, at least 32 characters; authorizes preparation |
 | `COOKIE_DOMAIN_ALLOWLIST` | `ycombinator.com` for this native demo |
-| `PUBLIC_BASE_URL` | Your deployment's HTTPS origin |
-| `APPLE_TEAM_ID` | Your Apple team ID; needed for App Clip association |
-| `APP_BUNDLE_IDENTIFIER` | Same base identifier as `Config/Local.xcconfig` |
 
 Run `openssl rand -hex 32` separately for each secret. Keep these on your backend
 and trusted development machine. Do not add them to `project.yml` or tracked
@@ -46,7 +43,7 @@ card preparation verifies the preparation secret and Browserbase connection and
 creates a recorded, ten-minute session. The script writes a private URL file and
 prints the session ID and grant expiration without printing the token.
 
-Set `APP_CLIP_DOMAIN` in `Config/Local.xcconfig` to this same hostname, then
+Set `BACKEND_DOMAIN` in `Config/Local.xcconfig` to this same hostname, then
 follow the [iMessage flow](../README.md#connect-a-real-session).
 
 ## Local API development
@@ -65,4 +62,4 @@ backend for device tests. Do not weaken the URL checks to accept arbitrary HTTP
 links. Backend tests mock upstream calls and do not require a live deployment.
 
 The [API reference](../vercel-cookie-loader/README.md) describes the preparation,
-upload, and optional SMS endpoints.
+upload, and health endpoints.

@@ -41,39 +41,6 @@ targets:
       - target: HNMessagesExtension
     scheme: {}
 
-  CookieClipHost:
-    type: application
-    platform: iOS
-    sources:
-      - Shared
-      - Host
-    info:
-      path: Host/Info.plist
-      properties:
-        CFBundleDisplayName: Cookie Clip Demo
-        CookieClipBaseURL: https://$(APP_CLIP_DOMAIN)
-        CookieClipBundleIdentifier: $(APP_BUNDLE_IDENTIFIER).Clip
-        UILaunchScreen: {}
-        UISupportedInterfaceOrientations:
-          - UIInterfaceOrientationPortrait
-          - UIInterfaceOrientationPortraitUpsideDown
-          - UIInterfaceOrientationLandscapeLeft
-          - UIInterfaceOrientationLandscapeRight
-    entitlements:
-      path: Host/CookieClipHost.entitlements
-      properties:
-        com.apple.developer.associated-domains:
-          - appclips:$(APP_CLIP_DOMAIN)
-          - applinks:$(APP_CLIP_DOMAIN)
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_IDENTIFIER)
-        ASSETCATALOG_COMPILER_APPICON_NAME: ""
-    dependencies:
-      - target: CookieClip
-      - target: HNMessagesExtension
-    scheme: {}
-
   HNMessagesExtension:
     type: app-extension.messages
     platform: iOS
@@ -82,13 +49,12 @@ targets:
       - Shared/MessageWebViewController.swift
       - Shared/WebViewMessageLink.swift
       - Shared/HackerNewsCookieCapture.swift
-      - Shared/AppClipInvocation.swift
+      - Shared/SignInCard.swift
     info:
       path: MessagesExtension/Info.plist
       properties:
         CFBundleDisplayName: HN Login
-        CookieClipBaseURL: https://$(APP_CLIP_DOMAIN)
-        CookieClipBundleIdentifier: $(APP_BUNDLE_IDENTIFIER).Clip
+        CookieTransferBaseURL: https://$(BACKEND_DOMAIN)
         CookieTransferClientSecret: $(COOKIE_TRANSFER_CLIENT_SECRET)
         NSExtension:
           NSExtensionPointIdentifier: com.apple.message-payload-provider
@@ -98,38 +64,4 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_IDENTIFIER).MessagesExtension
         APPLICATION_EXTENSION_API_ONLY: YES
         SKIP_INSTALL: YES
-    scheme: {}
-
-  CookieClip:
-    type: application.on-demand-install-capable
-    platform: iOS
-    sources:
-      - Shared
-      - Clip
-    info:
-      path: Clip/Info.plist
-      properties:
-        CFBundleDisplayName: Cookie Clip
-        CookieClipBaseURL: https://$(APP_CLIP_DOMAIN)
-        CookieClipBundleIdentifier: $(APP_BUNDLE_IDENTIFIER).Clip
-        UILaunchScreen: {}
-        UISupportedInterfaceOrientations:
-          - UIInterfaceOrientationPortrait
-          - UIInterfaceOrientationPortraitUpsideDown
-          - UIInterfaceOrientationLandscapeLeft
-          - UIInterfaceOrientationLandscapeRight
-        NSAppClip:
-          NSAppClipRequestEphemeralUserNotification: false
-          NSAppClipRequestLocationConfirmation: false
-    entitlements:
-      path: Clip/CookieClip.entitlements
-      properties:
-        com.apple.developer.associated-domains:
-          - appclips:$(APP_CLIP_DOMAIN)
-        com.apple.developer.parent-application-identifiers:
-          - $(AppIdentifierPrefix)$(APP_BUNDLE_IDENTIFIER)
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_IDENTIFIER).Clip
-        ASSETCATALOG_COMPILER_APPICON_NAME: ""
     scheme: {}

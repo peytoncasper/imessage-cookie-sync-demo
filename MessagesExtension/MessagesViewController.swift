@@ -7,7 +7,7 @@ final class MessagesViewController: MSMessagesAppViewController {
     private let brandColor = UIColor(red: 1, green: 69 / 255, blue: 0, alpha: 1)
 
     private var invocationBaseURL: URL {
-        let configured = Bundle.main.object(forInfoDictionaryKey: "CookieClipBaseURL") as? String
+        let configured = Bundle.main.object(forInfoDictionaryKey: "CookieTransferBaseURL") as? String
         return URL(string: configured ?? "https://cookieclip.example")!
     }
 
@@ -156,7 +156,7 @@ final class MessagesViewController: MSMessagesAppViewController {
             removeMessageWebView()
             resetTransferSession()
             suppressAutomaticTransfer = true
-            let invocation = AppClipInvocation.parse(url, baseURL: invocationBaseURL)
+            let invocation = SignInCard.parse(url, baseURL: invocationBaseURL)
             if let invocation {
                 transfer.reset(preparation: PreparedTransfer(
                     sessionId: invocation.sessionID, token: invocation.token, inspectorURL: nil
@@ -427,9 +427,9 @@ final class MessagesViewController: MSMessagesAppViewController {
                 let link: URL
                 let pastedURL = UIPasteboard.general.url
                     ?? UIPasteboard.general.string.flatMap { URL(string: $0.trimmingCharacters(in: .whitespacesAndNewlines)) }
-                if let pastedURL, let invocation = AppClipInvocation.parse(pastedURL, baseURL: self.invocationBaseURL) {
+                if let pastedURL, let invocation = SignInCard.parse(pastedURL, baseURL: self.invocationBaseURL) {
                     preparation = PreparedTransfer(sessionId: invocation.sessionID, token: invocation.token, inspectorURL: nil)
-                    // Normalize App Clip URLs and older cards into the Messages webpage route.
+                    // Normalize signed cards into the Messages webpage route.
                     guard var components = URLComponents(url: self.invocationBaseURL, resolvingAgainstBaseURL: false) else {
                         throw CookieTransferError.invalidResponse
                     }
@@ -452,7 +452,7 @@ final class MessagesViewController: MSMessagesAppViewController {
 
                 let layout = MSMessageTemplateLayout()
                 layout.image = BrowserbaseLogo.image(size: 200)
-                layout.imageTitle = "Browserbase Cookie Clip"
+                layout.imageTitle = "Browserbase HN Login"
                 layout.imageSubtitle = "Recorded Hacker News login"
                 layout.caption = "Open the login experience"
                 layout.subcaption = "Cookies transfer automatically after sign-in"
@@ -461,7 +461,7 @@ final class MessagesViewController: MSMessagesAppViewController {
                 let message = MSMessage(session: MSSession())
                 message.layout = layout
                 message.url = link
-                message.summaryText = "Open the Browserbase Cookie Clip demo"
+                message.summaryText = "Open the Browserbase HN Login demo"
 
                 try await conversation.insert(message)
                 try Task.checkCancellation()
@@ -498,7 +498,8 @@ final class MessagesViewController: MSMessagesAppViewController {
     private func invocationURL(for targetURL: URL, preparation: PreparedTransfer? = nil) -> URL? {
         var components = URLComponents(url: invocationBaseURL, resolvingAgainstBaseURL: false)
         components?.path = "/open"
-        var queryItems = [URLQueryItem(name: "target", value: targetURL.absoluteString)]
+        var queryItems = [URLQueryItem(name: "view", value: "web"),
+                          URLQueryItem(name: "target", value: targetURL.absoluteString)]
         if let preparation {
             queryItems.append(URLQueryItem(name: "bbSession", value: preparation.sessionId))
             queryItems.append(URLQueryItem(name: "bbToken", value: preparation.token))

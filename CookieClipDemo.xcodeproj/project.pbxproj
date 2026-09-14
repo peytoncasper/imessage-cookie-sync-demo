@@ -7,47 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05F927D324D3C17E82FA8401 /* AppClipCookieTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6344414B2CCD0F8C32E520 /* AppClipCookieTransfer.swift */; };
-		12B7D8B960ED875C1A8D6327 /* HackerNewsCookieCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4A13A55C4C428151F93114 /* HackerNewsCookieCapture.swift */; };
-		1559AA9309B118EE43A6473E /* AppClipLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC38E173C06699EF4C5DCC /* AppClipLoginView.swift */; };
-		38232649D7B505A88785FC2B /* CookieClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA37B85DEBF27C265765F51C /* CookieClipApp.swift */; };
+		128D50BD564131D2DB11C2EC /* SignInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F102E5C6A9B8FCC24225C /* SignInCard.swift */; };
 		524F37552AB09529A510DA9D /* HNMessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B7BAC1E1A03311614751A0B /* HNMessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		59107CDAA9E8810F4BE337AB /* MessageWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2F375D5AD867740D5946 /* MessageWebViewController.swift */; };
-		5EBE6F5E3E03C24AC3C05940 /* AppClipInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072814D22250D5E6FEB08F9 /* AppClipInvocation.swift */; };
 		6D3AED7E143E53057D6B6A7F /* WebViewMessageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07944EA6B69FC8645F51839C /* WebViewMessageLink.swift */; };
-		847EE8F4B0F5EDF4D098A89D /* WebViewMessageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07944EA6B69FC8645F51839C /* WebViewMessageLink.swift */; };
-		91F85AD1FF7540955B3B6FD5 /* WebViewMessageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07944EA6B69FC8645F51839C /* WebViewMessageLink.swift */; };
-		92A0D89EEA17457865C974CC /* MessageWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2F375D5AD867740D5946 /* MessageWebViewController.swift */; };
 		9D77A9915FDA610C6AECC1C3 /* HackerNewsCookieCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4A13A55C4C428151F93114 /* HackerNewsCookieCapture.swift */; };
 		A0B6ADB7C8D04A0172DFA150 /* MessagesCookieTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D26FAA991321D314C3168 /* MessagesCookieTransfer.swift */; };
-		A251BF6ED9C29B1A529A26A9 /* AppClipCookieTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6344414B2CCD0F8C32E520 /* AppClipCookieTransfer.swift */; };
-		AFFFAD9C58AB34DDF837C50D /* AppClipInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072814D22250D5E6FEB08F9 /* AppClipInvocation.swift */; };
 		C351A57C9F382B3A4442ACF0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5ED718F7954296089EBDC4 /* MessagesViewController.swift */; };
-		C6A5C7AFE3956DD1F5406A92 /* AppClipLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC38E173C06699EF4C5DCC /* AppClipLoginView.swift */; };
-		D16719F12E4EE1B4642228DD /* HackerNewsCookieCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4A13A55C4C428151F93114 /* HackerNewsCookieCapture.swift */; };
-		D750D815AD080EAA2F74FB4F /* HNMessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B7BAC1E1A03311614751A0B /* HNMessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D8B3C34EB882CF4842361B2D /* AppClipInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072814D22250D5E6FEB08F9 /* AppClipInvocation.swift */; };
-		E7C252D40666552F1E85819B /* CookieClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 4849D194C81269A9F58894DC /* CookieClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA6EA256B65DC96CDA91E28D /* BrowserbaseLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42C585105EA467CA945C90 /* BrowserbaseLogo.swift */; };
-		F31D8529B871B763581F7EC8 /* CookieClipHostApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500B695AE5D3F89D61A75 /* CookieClipHostApp.swift */; };
-		F813EB54D9FB9CB9C66A2EBE /* MessageWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C2F375D5AD867740D5946 /* MessageWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		971036BD5445676648D88410 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5AFB9BE7AE3FC7A9222FCD7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13DFD0D4B32AF57D99AED2C3;
-			remoteInfo = CookieClip;
-		};
-		C4BB1CB10B15411F947F3CB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5AFB9BE7AE3FC7A9222FCD7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2E95B5214501C45563DE1C62;
-			remoteInfo = HNMessagesExtension;
-		};
 		DD02F4A2CE09D82780F2C1D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5AFB9BE7AE3FC7A9222FCD7 /* Project object */;
@@ -58,28 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		48435726A4E31264113863F7 /* Embed App Clips */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
-			dstSubfolderSpec = 16;
-			files = (
-				E7C252D40666552F1E85819B /* CookieClip.app in Embed App Clips */,
-			);
-			name = "Embed App Clips";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A91BFEAD5B4915271338F989 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				D750D815AD080EAA2F74FB4F /* HNMessagesExtension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DEE9328E592564D45A3C8838 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,27 +42,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0417E40F44A57DE319F6C706 /* CookieClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookieClip.entitlements; sourceTree = "<group>"; };
 		07944EA6B69FC8645F51839C /* WebViewMessageLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewMessageLink.swift; sourceTree = "<group>"; };
 		0B7BAC1E1A03311614751A0B /* HNMessagesExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = HNMessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E8FB0B5BA148EA6282411BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		3AC500B695AE5D3F89D61A75 /* CookieClipHostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieClipHostApp.swift; sourceTree = "<group>"; };
-		4849D194C81269A9F58894DC /* CookieClip.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CookieClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		502F102E5C6A9B8FCC24225C /* SignInCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCard.swift; sourceTree = "<group>"; };
 		567C2F375D5AD867740D5946 /* MessageWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageWebViewController.swift; sourceTree = "<group>"; };
 		6F4A13A55C4C428151F93114 /* HackerNewsCookieCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsCookieCapture.swift; sourceTree = "<group>"; };
-		7A6344414B2CCD0F8C32E520 /* AppClipCookieTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipCookieTransfer.swift; sourceTree = "<group>"; };
 		814D26FAA991321D314C3168 /* MessagesCookieTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCookieTransfer.swift; sourceTree = "<group>"; };
 		82E56FAD02838DA4A1F08684 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		864783B3CD57AA966F1EC43E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8B5ED718F7954296089EBDC4 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		9F2AFB8348DB45CF2E5FD05B /* CookieClipHost.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CookieClipHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC41AF0006A83CD1CB9EADD /* HNMessages.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HNMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B072814D22250D5E6FEB08F9 /* AppClipInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipInvocation.swift; sourceTree = "<group>"; };
 		BB42C585105EA467CA945C90 /* BrowserbaseLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserbaseLogo.swift; sourceTree = "<group>"; };
-		C368E6CA92AEF30C356D4FCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D6EC38E173C06699EF4C5DCC /* AppClipLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipLoginView.swift; sourceTree = "<group>"; };
-		EA37B85DEBF27C265765F51C /* CookieClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieClipApp.swift; sourceTree = "<group>"; };
-		F3243E4CC6895FE1BA1FC5A4 /* CookieClipHost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookieClipHost.entitlements; sourceTree = "<group>"; };
 		FDB09653D32E008FD974B97D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,8 +60,6 @@
 		0A74845EB5C1D19FE2FE7734 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4849D194C81269A9F58894DC /* CookieClip.app */,
-				9F2AFB8348DB45CF2E5FD05B /* CookieClipHost.app */,
 				AFC41AF0006A83CD1CB9EADD /* HNMessages.app */,
 				0B7BAC1E1A03311614751A0B /* HNMessagesExtension.appex */,
 			);
@@ -133,9 +69,7 @@
 		39DC5D6CB98D8D1BE2EBB323 = {
 			isa = PBXGroup;
 			children = (
-				C0D459707DCBAC398650246C /* Clip */,
 				A9B9AAADA133CAEFCEB149F6 /* Config */,
-				B9BB30530C3AB9D2BE0D9CAF /* Host */,
 				EDE85149C4181990F195C817 /* MessagesExtension */,
 				57B7B36B85482B8333C43516 /* Shared */,
 				0A74845EB5C1D19FE2FE7734 /* Products */,
@@ -145,11 +79,9 @@
 		57B7B36B85482B8333C43516 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7A6344414B2CCD0F8C32E520 /* AppClipCookieTransfer.swift */,
-				B072814D22250D5E6FEB08F9 /* AppClipInvocation.swift */,
-				D6EC38E173C06699EF4C5DCC /* AppClipLoginView.swift */,
 				6F4A13A55C4C428151F93114 /* HackerNewsCookieCapture.swift */,
 				567C2F375D5AD867740D5946 /* MessageWebViewController.swift */,
+				502F102E5C6A9B8FCC24225C /* SignInCard.swift */,
 				07944EA6B69FC8645F51839C /* WebViewMessageLink.swift */,
 			);
 			path = Shared;
@@ -162,26 +94,6 @@
 				864783B3CD57AA966F1EC43E /* Release.xcconfig */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		B9BB30530C3AB9D2BE0D9CAF /* Host */ = {
-			isa = PBXGroup;
-			children = (
-				F3243E4CC6895FE1BA1FC5A4 /* CookieClipHost.entitlements */,
-				3AC500B695AE5D3F89D61A75 /* CookieClipHostApp.swift */,
-				1E8FB0B5BA148EA6282411BD /* Info.plist */,
-			);
-			path = Host;
-			sourceTree = "<group>";
-		};
-		C0D459707DCBAC398650246C /* Clip */ = {
-			isa = PBXGroup;
-			children = (
-				0417E40F44A57DE319F6C706 /* CookieClip.entitlements */,
-				EA37B85DEBF27C265765F51C /* CookieClipApp.swift */,
-				C368E6CA92AEF30C356D4FCB /* Info.plist */,
-			);
-			path = Clip;
 			sourceTree = "<group>";
 		};
 		EDE85149C4181990F195C817 /* MessagesExtension */ = {
@@ -198,23 +110,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13DFD0D4B32AF57D99AED2C3 /* CookieClip */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9303D9BEBDE0B6ACF5E2120E /* Build configuration list for PBXNativeTarget "CookieClip" */;
-			buildPhases = (
-				64AA12213C05DAF1047A6D6D /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CookieClip;
-			packageProductDependencies = (
-			);
-			productName = CookieClip;
-			productReference = 4849D194C81269A9F58894DC /* CookieClip.app */;
-			productType = "com.apple.product-type.application.on-demand-install-capable";
-		};
 		2E95B5214501C45563DE1C62 /* HNMessagesExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08BD31C47F540739B6CF5199 /* Build configuration list for PBXNativeTarget "HNMessagesExtension" */;
@@ -231,27 +126,6 @@
 			productName = HNMessagesExtension;
 			productReference = 0B7BAC1E1A03311614751A0B /* HNMessagesExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
-		};
-		605440ACC60EDFAC8E375A2D /* CookieClipHost */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EBE4566B0C9E910642F5AFE7 /* Build configuration list for PBXNativeTarget "CookieClipHost" */;
-			buildPhases = (
-				FFA5B1EABC043BCF4292A067 /* Sources */,
-				A91BFEAD5B4915271338F989 /* Embed Foundation Extensions */,
-				48435726A4E31264113863F7 /* Embed App Clips */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4481D372395FDBF04B8DEC66 /* PBXTargetDependency */,
-				DBF4AFAC5E40ED9929C16044 /* PBXTargetDependency */,
-			);
-			name = CookieClipHost;
-			packageProductDependencies = (
-			);
-			productName = CookieClipHost;
-			productReference = 9F2AFB8348DB45CF2E5FD05B /* CookieClipHost.app */;
-			productType = "com.apple.product-type.application";
 		};
 		EDBF8687AB874A5B8FEE6A69 /* HNMessages */ = {
 			isa = PBXNativeTarget;
@@ -280,15 +154,7 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					13DFD0D4B32AF57D99AED2C3 = {
-						DevelopmentTeam = "";
-						ProvisioningStyle = Automatic;
-					};
 					2E95B5214501C45563DE1C62 = {
-						DevelopmentTeam = "";
-						ProvisioningStyle = Automatic;
-					};
-					605440ACC60EDFAC8E375A2D = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
@@ -313,9 +179,7 @@
 			projectRoot = "";
 			targets = (
 				EDBF8687AB874A5B8FEE6A69 /* HNMessages */,
-				605440ACC60EDFAC8E375A2D /* CookieClipHost */,
 				2E95B5214501C45563DE1C62 /* HNMessagesExtension */,
-				13DFD0D4B32AF57D99AED2C3 /* CookieClip */,
 			);
 		};
 /* End PBXProject section */
@@ -325,57 +189,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EBE6F5E3E03C24AC3C05940 /* AppClipInvocation.swift in Sources */,
 				EA6EA256B65DC96CDA91E28D /* BrowserbaseLogo.swift in Sources */,
 				9D77A9915FDA610C6AECC1C3 /* HackerNewsCookieCapture.swift in Sources */,
 				59107CDAA9E8810F4BE337AB /* MessageWebViewController.swift in Sources */,
 				A0B6ADB7C8D04A0172DFA150 /* MessagesCookieTransfer.swift in Sources */,
 				C351A57C9F382B3A4442ACF0 /* MessagesViewController.swift in Sources */,
+				128D50BD564131D2DB11C2EC /* SignInCard.swift in Sources */,
 				6D3AED7E143E53057D6B6A7F /* WebViewMessageLink.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64AA12213C05DAF1047A6D6D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05F927D324D3C17E82FA8401 /* AppClipCookieTransfer.swift in Sources */,
-				AFFFAD9C58AB34DDF837C50D /* AppClipInvocation.swift in Sources */,
-				1559AA9309B118EE43A6473E /* AppClipLoginView.swift in Sources */,
-				38232649D7B505A88785FC2B /* CookieClipApp.swift in Sources */,
-				D16719F12E4EE1B4642228DD /* HackerNewsCookieCapture.swift in Sources */,
-				F813EB54D9FB9CB9C66A2EBE /* MessageWebViewController.swift in Sources */,
-				91F85AD1FF7540955B3B6FD5 /* WebViewMessageLink.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFA5B1EABC043BCF4292A067 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A251BF6ED9C29B1A529A26A9 /* AppClipCookieTransfer.swift in Sources */,
-				D8B3C34EB882CF4842361B2D /* AppClipInvocation.swift in Sources */,
-				C6A5C7AFE3956DD1F5406A92 /* AppClipLoginView.swift in Sources */,
-				F31D8529B871B763581F7EC8 /* CookieClipHostApp.swift in Sources */,
-				12B7D8B960ED875C1A8D6327 /* HackerNewsCookieCapture.swift in Sources */,
-				92A0D89EEA17457865C974CC /* MessageWebViewController.swift in Sources */,
-				847EE8F4B0F5EDF4D098A89D /* WebViewMessageLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4481D372395FDBF04B8DEC66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13DFD0D4B32AF57D99AED2C3 /* CookieClip */;
-			targetProxy = 971036BD5445676648D88410 /* PBXContainerItemProxy */;
-		};
-		DBF4AFAC5E40ED9929C16044 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2E95B5214501C45563DE1C62 /* HNMessagesExtension */;
-			targetProxy = C4BB1CB10B15411F947F3CB9 /* PBXContainerItemProxy */;
-		};
 		DCA273B46BF1CE4F91F75B7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2E95B5214501C45563DE1C62 /* HNMessagesExtension */;
@@ -564,39 +390,6 @@
 			};
 			name = Debug;
 		};
-		5BF563F19B17BD8B138E933B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = Clip/CookieClip.entitlements;
-				INFOPLIST_FILE = Clip/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER).Clip";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		60AE03BAF8A374AC235BBAC6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = Host/CookieClipHost.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Host/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		9829021613C83C60ACBC575D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -607,39 +400,6 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A48B3198311C501976B0A5EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = Host/CookieClipHost.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Host/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B3E0C47607B41C262B281460 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = Clip/CookieClip.entitlements;
-				INFOPLIST_FILE = Clip/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_IDENTIFIER).Clip";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -666,29 +426,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9303D9BEBDE0B6ACF5E2120E /* Build configuration list for PBXNativeTarget "CookieClip" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BF563F19B17BD8B138E933B /* Debug */,
-				B3E0C47607B41C262B281460 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 		DF38F5CA7DEB5E4BAD4DC5D9 /* Build configuration list for PBXProject "CookieClipDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F778384611C93D268536C15 /* Debug */,
 				09D0C310755118CCB76CA377 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		EBE4566B0C9E910642F5AFE7 /* Build configuration list for PBXNativeTarget "CookieClipHost" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				60AE03BAF8A374AC235BBAC6 /* Debug */,
-				A48B3198311C501976B0A5EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

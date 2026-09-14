@@ -1,8 +1,7 @@
 # iMessage guide
 
-Use the **HNMessages** scheme for the smallest installation. **CookieClipHost**
-also embeds the extension and App Clip; both containers intentionally share a
-base bundle ID, so installing one variant replaces the other.
+Use the **HNMessages** scheme. It installs the standalone Messages container
+and its **HNMessagesExtension**; there is no Home Screen app.
 
 ## Cards
 
@@ -52,7 +51,7 @@ on trusted development devices.
 | No Home Screen icon | Expected for HNMessages; open it through a Messages conversation |
 | HN Login absent from the first + menu | Swipe up within the app list to reveal the remaining apps |
 | HN Login missing | Check Settings → Apps → Messages → iMessage Apps; reinstall the selected container if needed |
-| Invalid or expired card | Prepare a new card; verify its hostname matches `APP_CLIP_DOMAIN` |
+| Invalid or expired card | Prepare a new card; verify its hostname matches `BACKEND_DOMAIN` |
 | Add Card asks for a URL | Put a fresh backend-prepared URL on the iPhone clipboard |
 | Webpage works but no transfer | Use a signed card, or configure the private Debug credential |
 | Backend responds 401 | Check the preparation secret or obtain a fresh, unconsumed grant |

@@ -1,6 +1,6 @@
 import Foundation
 
-/// The receiving contract for Linq's WebView-only demo cards.
+/// URL validation and presentation for iMessage webpage cards.
 enum WebViewMessageLink {
     static func prefersCompactPresentation(_ url: URL) -> Bool {
         URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?

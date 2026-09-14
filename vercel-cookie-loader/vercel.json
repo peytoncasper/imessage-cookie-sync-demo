@@ -6,15 +6,12 @@
     },
     "api/transfers/prepare.ts": {
       "maxDuration": 15
-    },
-    "api/texts.ts": {
-      "maxDuration": 15
     }
   },
   "rewrites": [
     {
-      "source": "/.well-known/apple-app-site-association",
-      "destination": "/api/aasa"
+      "source": "/",
+      "destination": "/api/open"
     },
     {
       "source": "/open",

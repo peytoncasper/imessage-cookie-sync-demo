@@ -1,16 +1,14 @@
 import Foundation
 
 /// A card authorizes one short-lived transfer. Permanent backend credentials
-/// are never shipped in the App Clip. The server verifies the token signature.
-struct AppClipInvocation: Equatable {
+/// are never shipped in release builds. The server verifies the token signature.
+struct SignInCard: Equatable {
     let target: URL
     let sessionID: String
     let token: String
     let expiresAt: Date
 
-    static func parse(_ url: URL, baseURL: URL, now: Date = Date(),
-                      clipBundleID: String = Bundle.main.object(forInfoDictionaryKey: "CookieClipBundleIdentifier") as? String
-                        ?? "com.example.CookieClipDemo.Clip") -> AppClipInvocation? {
+    static func parse(_ url: URL, baseURL: URL, now: Date = Date()) -> SignInCard? {
         guard url.absoluteString.utf8.count <= 2048,
               let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
               components.scheme?.lowercased() == "https",
@@ -20,15 +18,9 @@ struct AppClipInvocation: Equatable {
 
         let items = components.queryItems ?? []
         guard Set(items.map(\.name)).count == items.count else { return nil }
-        let isAppleLink = components.host?.lowercased() == "appclip.apple.com"
-        if isAppleLink {
-            guard components.path == "/id",
-                  items.first(where: { $0.name == "p" })?.value == clipBundleID else { return nil }
-        } else {
-            guard components.host?.lowercased() == baseURL.host?.lowercased(),
-                  components.path == "/open" else { return nil }
-        }
-        let allowedKeys = ["target", "bbSession", "bbToken", "test", "view"] + (isAppleLink ? ["p"] : [])
+        guard components.host?.lowercased() == baseURL.host?.lowercased(),
+              components.path == "/open" else { return nil }
+        let allowedKeys = ["target", "bbSession", "bbToken", "test", "view"]
         guard items.allSatisfy({ allowedKeys.contains($0.name) }),
               items.first(where: { $0.name == "view" }).map({ $0.value == "web" }) ?? true,
               let rawTarget = items.first(where: { $0.name == "target" })?.value,
@@ -46,8 +38,8 @@ struct AppClipInvocation: Equatable {
               claims.s == sessionID, claims.e - claims.i == 600_000,
               claims.i <= now.timeIntervalSince1970 * 1000 + 5000,
               claims.e > now.timeIntervalSince1970 * 1000 else { return nil }
-        return AppClipInvocation(target: target, sessionID: sessionID, token: token,
-                                 expiresAt: Date(timeIntervalSince1970: claims.e / 1000))
+        return SignInCard(target: target, sessionID: sessionID, token: token,
+                          expiresAt: Date(timeIntervalSince1970: claims.e / 1000))
     }
 
     private struct Claims: Decodable {

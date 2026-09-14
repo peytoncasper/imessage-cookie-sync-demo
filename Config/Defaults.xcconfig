@@ -1,5 +1,5 @@
 // Portable defaults build in Simulator without an Apple account or backend.
 APP_BUNDLE_IDENTIFIER = com.example.CookieClipDemo
-APP_CLIP_DOMAIN = cookieclip.example
+BACKEND_DOMAIN = cookieclip.example
 DEVELOPMENT_TEAM =
 COOKIE_TRANSFER_CLIENT_SECRET =

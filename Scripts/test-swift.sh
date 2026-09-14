@@ -9,5 +9,5 @@ swiftc Shared/HackerNewsCookieCapture.swift Tests/HackerNewsCookieCaptureTests.s
 "$test_dir/cookies"
 swiftc Shared/HackerNewsCookieCapture.swift MessagesExtension/MessagesCookieTransfer.swift Tests/MessagesCookieTransferTests.swift -o "$test_dir/messages"
 "$test_dir/messages"
-swiftc Shared/WebViewMessageLink.swift Shared/HackerNewsCookieCapture.swift Shared/AppClipInvocation.swift Shared/AppClipCookieTransfer.swift Tests/AppClipSessionTests.swift -o "$test_dir/appclip"
-"$test_dir/appclip"
+swiftc Shared/WebViewMessageLink.swift Shared/SignInCard.swift Tests/SignInCardTests.swift -o "$test_dir/cards"
+"$test_dir/cards"

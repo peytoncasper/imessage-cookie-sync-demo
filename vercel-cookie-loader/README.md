@@ -1,11 +1,10 @@
-# Cookie Clip backend
+# HN Login backend
 
 A Vercel Node.js service for preparing isolated Browserbase sessions and
 injecting authenticated cookie payloads through Chrome DevTools Protocol.
 
 Start with [backend setup](../docs/backend-setup.md). The main native flow needs
-Browserbase credentials and two separate secrets; it does not require an SMS
-provider. Use Node 22 and install dependencies with `npm ci`.
+Browserbase credentials and two separate secrets. Use Node 22 and install dependencies with `npm ci`.
 
 ## Prepare a sign-in card
 
@@ -73,21 +72,7 @@ single-use grants. See [deployment notes](../docs/deployment.md).
 | Endpoint | Purpose |
 | --- | --- |
 | `GET /api/health` | Reachability only; does not validate upstream credentials |
-| `GET /.well-known/apple-app-site-association` | AASA from `APPLE_TEAM_ID` and `APP_BUNDLE_IDENTIFIER`; 503 if unconfigured |
-| `GET /open` | Informational landing page and configured App Clip metadata |
-| `POST /api/texts` | Optional older SMS experiment; sends a real text |
-| `POST /api/handoffs/redeem` | Redeems the older encrypted SMS handoff |
-
-The older SMS endpoints generate `/open?h=...` links, valid for 15 minutes. The
-current native app does not redeem these links. The original client is retained
-under `examples/cookie-inspector`; do not use this route as the main sign-in demo.
-
-SMS sending requires `TEXT_SEND_SECRET`, `HANDOFF_SECRET`, `PUBLIC_BASE_URL`,
-`TARGET_DOMAIN_ALLOWLIST`, and configured Twilio credentials (or optional
-Textbelt mode). Requests include an E.164 `to`, HTTPS `targetUrl`, and
-`consentConfirmed: true`. The root administration page provides the same form.
-Recipient limits and replay detection use process memory. See `.env.example`
-for the optional variables; the setup scripts never send messages.
+| `GET /` or `GET /open` | Instructions for opening a sign-in card in Messages |
 
 ## Development and deployment
 

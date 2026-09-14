@@ -1,13 +1,13 @@
-# Cookie Clip
+# HN Login
 
 Sign in to Hacker News inside iMessage and connect that login to a Browserbase
 browser session. This is a developer starter for a native login handoff: the
 webpage runs in an isolated WebView, and a short-lived card authorizes the cookie
 transfer. It cannot read Safari cookies.
 
-**Start with the standalone iMessage app.** The App Clip is an optional launch
-path that requires additional Apple configuration. This repo is a working demo,
-not a publicly distributed app or a general-purpose authentication SDK.
+**HN Login is a standalone iMessage app.** This repo contains the app, its
+Browserbase backend, and the setup and checks needed to develop them. It is a
+working demo, not a publicly distributed app or a general-purpose authentication SDK.
 
 ## Quick start
 
@@ -40,7 +40,7 @@ the iOS 26.5 SDK. `make doctor` reports missing prerequisites and setup steps.
 
 1. Follow [backend setup](docs/backend-setup.md) to deploy your own Vercel service.
 2. Edit `Config/Local.xcconfig`: set your `DEVELOPMENT_TEAM`,
-   `APP_BUNDLE_IDENTIFIER`, and `APP_CLIP_DOMAIN` (hostname only). These settings
+   `APP_BUNDLE_IDENTIFIER`, and `BACKEND_DOMAIN` (hostname only). These settings
    stay local and apply when Xcode builds. `make setup` creates the file once.
 3. Install **HNMessages** on your development iPhone from Xcode.
 4. Prepare a card from your Mac. This creates a billable Browserbase session,
@@ -72,12 +72,10 @@ expected behavior, and troubleshooting.
 | Path | Purpose |
 | --- | --- |
 | `MessagesApp/`, `MessagesExtension/` | Standalone iMessage container, card UI, transfer coordinator |
-| `Shared/` | WebView, link validation, cookie capture, and App Clip transfer code |
-| `Host/`, `Clip/` | Optional host app and App Clip |
+| `Shared/` | WebView, link and signed-card validation, cookie capture |
 | `vercel-cookie-loader/` | Vercel API for Browserbase preparation and cookie upload |
 | `Config/`, `project.yml` | Portable Xcode settings and project generation |
 | `Scripts/`, `Tests/` | Setup, card preparation, and checks without live accounts |
-| `examples/` | Optional video composition and original cookie-inspector prototype |
 | `docs/` | Setup, architecture, and deployment notes |
 
 ## Common commands
@@ -94,10 +92,8 @@ expected behavior, and troubleshooting.
 The backend can be developed on Linux with `npm --prefix vercel-cookie-loader ci`
 and `make test-backend test-python`. Native builds require macOS.
 
-## Other paths and current limits
+## Deployment and current limits
 
-- [App Clip setup](docs/app-clip.md): builds locally, but public on-demand launch
-  requires an approved Apple experience and has not been verified here.
 - [Architecture](docs/architecture.md): card lifetimes, cookie isolation, and
   transfer behavior.
 - [Deployment notes](docs/deployment.md): account configuration and limitations
@@ -106,8 +102,7 @@ and `make test-backend test-python`. Native builds require macOS.
 
 Each prepared card gets its own Browserbase session. Replay tracking currently
 uses process memory and is not a global one-use guarantee across serverless
-instances. The older SMS handoff API remains an experiment; its `/open?h=...`
-links are not accepted by the current native sign-in flow.
+instances.
 
 ## License
 

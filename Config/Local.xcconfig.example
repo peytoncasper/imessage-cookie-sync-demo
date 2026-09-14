@@ -1,7 +1,7 @@
 // Copy to Local.xcconfig. Values stay on your machine.
 DEVELOPMENT_TEAM = YOURTEAMID
 APP_BUNDLE_IDENTIFIER = com.yourcompany.CookieClipDemo
-// Hostname only; it must match the deployed backend and Apple association.
-APP_CLIP_DOMAIN = your-project.vercel.app
+// Hostname only; it must match the deployed backend.
+BACKEND_DOMAIN = your-project.vercel.app
 // Optional private Debug builds only. Prefer server-prepared sign-in cards.
 // COOKIE_TRANSFER_CLIENT_SECRET =

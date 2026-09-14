@@ -18,6 +18,5 @@ builds, live recordings, `.vercel` state, or dependency directories. Tests shoul
 use synthetic tokens and mocked services, and must not send messages or create
 paid sessions.
 
-The optional examples are not built by the main targets. Preserve that boundary
-when experimenting. The CI workflow runs backend/Python checks on Linux and
-native checks plus a Simulator build on macOS; no live credentials are needed.
+The CI workflow runs backend/Python checks on Linux and native checks plus a
+Simulator build on macOS; no live credentials are needed.
